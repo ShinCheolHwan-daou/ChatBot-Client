@@ -7,9 +7,8 @@ function Chat({chat}) {
             <div
                 className="bg-gray-800 text-white p-4 rounded-xl shadow-lg mb-4 border border-gray-600">
                 <h2 className="text-lg font-semibold mb-2">📊 요약</h2>
-                <p className="text-sm text-gray-300 leading-relaxed">
-                    {chat.summary}
-
+                <p className="text-sm text-gray-300 leading-relaxed whitespace-pre-wrap">
+                    {chat.summary.replaceAll(". ", ".\n")}
                 </p>
             </div>
             {
@@ -67,7 +66,7 @@ function Chat({chat}) {
                             }
 
 
-                            <p className="w-1/2 text-[15px] font-medium text-left text-white">
+                            <p className="w-1/2 text-[15px] font-medium text-left text-white whitespace-pre-wrap">
                                 {chat.content}
                             </p>
                         </div>
