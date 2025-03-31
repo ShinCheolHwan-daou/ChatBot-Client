@@ -15,7 +15,7 @@ function Portfolio({user, assets}) {
                         case 1:
                             return (<div key={`asset-category-${asset.category}`}>
                                 <p className="text-gray-300 mb-4">📈 주식 자산: <span
-                                    className="font-bold text-blue-400">300,000</span></p>
+                                    className="font-bold text-blue-400">{asset.amount.toLocaleString()}</span></p>
                                 <div>
                                     {
                                         asset.user_stocks.map(stock => {
